@@ -32,10 +32,7 @@ const Projects = ({ onProjectClick }) => {
   };
 
   return (
-    <section
-      id="projects"
-      className="py-20 bg-gray-900 relative overflow-hidden"
-    >
+    <section id="projects" className="py-20 bg-dark relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -59,11 +56,11 @@ const Projects = ({ onProjectClick }) => {
           <motion.div variants={itemVariants} className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               Featured{" "}
-              <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Projects
               </span>
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-4"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4 rounded-full"></div>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Here are some of my recent projects that showcase my skills and
               experience
@@ -75,15 +72,15 @@ const Projects = ({ onProjectClick }) => {
             variants={itemVariants}
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
-            <FaFilter className="text-purple-400 mt-2" />
+            <FaFilter className="text-primary mt-2" />
             {categories.map((category) => (
               <motion.button
                 key={category}
                 onClick={() => setFilter(category)}
                 className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
                   filter === category
-                    ? "bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg shadow-purple-500/50"
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                    ? "bg-gradient-to-r from-primary to-secondary text-white shadow-lg shadow-primary/25"
+                    : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-primary/50"
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -100,7 +97,7 @@ const Projects = ({ onProjectClick }) => {
                 key={project.id}
                 variants={itemVariants}
                 layout
-                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 group"
+                className="glass rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 group"
                 whileHover={{ y: -10 }}
               >
                 {/* Project Image */}
@@ -110,17 +107,17 @@ const Projects = ({ onProjectClick }) => {
                     alt={project.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     onError={(e) => {
-                      e.target.src = `https://via.placeholder.com/400x300/9333EA/FFFFFF?text=${encodeURIComponent(
+                      e.target.src = `https://via.placeholder.com/400x300/06b6d4/FFFFFF?text=${encodeURIComponent(
                         project.name
                       )}`;
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
 
                   {/* Featured Badge */}
                   {project.featured && (
                     <motion.div
-                      className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full text-white text-xs font-bold"
+                      className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-primary to-secondary rounded-full text-white text-xs font-bold"
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: 0.3 + index * 0.1 }}
@@ -132,7 +129,7 @@ const Projects = ({ onProjectClick }) => {
 
                 {/* Project Info */}
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300">
                     {project.name}
                   </h3>
 
@@ -145,13 +142,13 @@ const Projects = ({ onProjectClick }) => {
                     {project.technologies.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-purple-900/30 border border-purple-500/30 rounded-full text-xs text-purple-300"
+                        className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-xs text-primary"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 3 && (
-                      <span className="px-3 py-1 bg-purple-900/30 border border-purple-500/30 rounded-full text-xs text-purple-300">
+                      <span className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-xs text-primary">
                         +{project.technologies.length - 3}
                       </span>
                     )}
@@ -161,7 +158,7 @@ const Projects = ({ onProjectClick }) => {
                   <div className="flex gap-3">
                     <motion.button
                       onClick={() => onProjectClick(project.id)}
-                      className="flex-1 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 flex items-center justify-center gap-2"
+                      className="flex-1 px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 flex items-center justify-center gap-2"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -171,7 +168,7 @@ const Projects = ({ onProjectClick }) => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
+                      className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-all duration-300 flex items-center justify-center border border-gray-700 hover:border-primary/50"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       title="View on GitHub"
@@ -182,7 +179,7 @@ const Projects = ({ onProjectClick }) => {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
+                      className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-all duration-300 flex items-center justify-center border border-gray-700 hover:border-primary/50"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       title="View Live Demo"

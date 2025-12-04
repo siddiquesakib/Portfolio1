@@ -1,11 +1,8 @@
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import ProjectDetails from "./components/ProjectDetails";
 import Contact from "./components/Contact";
@@ -16,25 +13,23 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-dark">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Education />
-      <Experience />
-      <Projects onProjectClick={setSelectedProject} />
-      <Contact />
-      <Footer />
-
-      <AnimatePresence>
-        {selectedProject && (
-          <ProjectDetails
-            projectId={selectedProject}
-            onClose={() => setSelectedProject(null)}
-          />
-        )}
-      </AnimatePresence>
+      {selectedProject ? (
+        <ProjectDetails
+          projectId={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      ) : (
+        <>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects onProjectClick={setSelectedProject} />
+          <Contact />
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

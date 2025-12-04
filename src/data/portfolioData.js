@@ -1,14 +1,15 @@
 // Portfolio Data - Update this file with your personal information
 
 export const personalInfo = {
-  name: "Your Name",
-  designation: "Full Stack Developer",
-  tagline: "Building elegant solutions to complex problems",
-  email: "your.email@example.com",
-  phone: "+1234567890",
-  whatsapp: "+1234567890",
-  location: "Your City, Country",
-  resumeUrl: "/resume.pdf", // Place your resume in the public folder
+  name: "Mohammad Siddique Sakib",
+  designation: "MERN Stack Developer",
+  tagline:
+    "Web Developer specializing in React, Tailwind CSS, Node.js, Firebase, and MongoDB.",
+  email: "dmsakib1122@gmail.com",
+  phone: "+8801851182639",
+  whatsapp: "+8801851182639",
+  location: "Chattogram, Bangladesh",
+  resumeUrl: "/Resume_of_Mohammad_Siddique_Sakib.pdf", // Place your resume in the public folder
   profileImage: "/Ts.png", // Place your image in the public folder
 
   social: {
@@ -19,7 +20,7 @@ export const personalInfo = {
   },
 
   about: {
-    introduction: `I'm a passionate Full Stack Developer with a love for creating beautiful and functional web applications. My journey in programming started during my college years when I built my first website, and I haven't looked back since.`,
+    introduction: `Aspiring MERN-stack web developer with strong skills in JavaScript, React, Next.js, Node.js, and MongoDB. Passionate about building responsive, user-friendly web apps and eager to learn, contribute, and grow in a collaborative environment. `,
 
     journey: `My programming journey began with curiosity and has evolved into a professional career. I started with HTML and CSS, then moved to JavaScript, and eventually mastered modern frameworks like React, Node.js, and more. Every day brings new challenges and opportunities to learn.`,
 
@@ -35,79 +36,21 @@ export const skills = {
     { name: "JavaScript", level: 85 },
     { name: "HTML/CSS", level: 95 },
     { name: "Tailwind CSS", level: 88 },
-    { name: "TypeScript", level: 75 },
     { name: "Next.js", level: 80 },
   ],
   backend: [
     { name: "Node.js", level: 85 },
     { name: "Express.js", level: 82 },
     { name: "MongoDB", level: 78 },
-    { name: "PostgreSQL", level: 70 },
-    { name: "REST APIs", level: 88 },
     { name: "Firebase", level: 75 },
   ],
   tools: [
     { name: "Git & GitHub", level: 90 },
     { name: "VS Code", level: 95 },
     { name: "Figma", level: 70 },
-    { name: "Postman", level: 85 },
-    { name: "Docker", level: 65 },
     { name: "Vite", level: 88 },
   ],
 };
-
-export const education = [
-  {
-    id: 1,
-    degree: "Bachelor of Science in Computer Science",
-    institution: "University Name",
-    location: "City, Country",
-    period: "2019 - 2023",
-    grade: "CGPA: 3.8/4.0",
-    description:
-      "Focused on software engineering, data structures, algorithms, and web development.",
-  },
-  {
-    id: 2,
-    degree: "Higher Secondary Certificate (HSC)",
-    institution: "College Name",
-    location: "City, Country",
-    period: "2017 - 2019",
-    grade: "GPA: 5.0/5.0",
-    description:
-      "Science background with focus on Mathematics and Computer Science.",
-  },
-];
-
-export const experience = [
-  {
-    id: 1,
-    position: "Frontend Developer",
-    company: "Tech Company Name",
-    location: "City, Country",
-    period: "Jan 2023 - Present",
-    type: "Full-time",
-    responsibilities: [
-      "Developed and maintained responsive web applications using React and TypeScript",
-      "Collaborated with UX/UI designers to implement pixel-perfect designs",
-      "Optimized application performance, reducing load time by 40%",
-      "Mentored junior developers and conducted code reviews",
-    ],
-  },
-  {
-    id: 2,
-    position: "Web Development Intern",
-    company: "Startup Name",
-    location: "City, Country",
-    period: "Jun 2022 - Dec 2022",
-    type: "Internship",
-    responsibilities: [
-      "Built reusable React components for the company's design system",
-      "Implemented RESTful APIs integration",
-      "Participated in agile development processes",
-    ],
-  },
-];
 
 export const projects = [
   {
