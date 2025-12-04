@@ -55,12 +55,18 @@ export const skills = {
 export const projects = [
   {
     id: 1,
-    name: "E-Commerce Platform",
+    name: "Plant-Care",
     shortDescription:
-      "A full-stack e-commerce solution with cart, payment integration, and admin dashboard",
-    image: "/projects/ecommerce.jpg", // Add project images to public/projects folder
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-    category: "Full Stack",
+      "An elegant single-page web application designed for plant enthusiasts to explore plant care guides, shop for plants, and book expert consultations.",
+    image: "/Plant-Care1.png",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Firebase ",
+      "Node.js",
+      "Tailwind CSS",
+    ],
+    category: "Frontend",
     featured: true,
 
     // Detailed information
@@ -68,13 +74,10 @@ export const projects = [
 
     mainTech: {
       frontend: "React with React Router and Context API for state management",
-      backend: "Node.js and Express.js with RESTful API architecture",
-      database: "MongoDB with Mongoose ODM",
-      payment: "Stripe payment gateway integration",
       styling: "Tailwind CSS for responsive design",
     },
 
-    features: [
+    Features: [
       "User authentication and authorization",
       "Product search and filtering",
       "Shopping cart with local storage persistence",
@@ -84,31 +87,23 @@ export const projects = [
       "Responsive design for all devices",
     ],
 
-    challenges: [
-      "Implementing secure payment processing while maintaining good UX",
-      "Managing complex state across multiple components",
-      "Optimizing database queries for better performance",
-      "Handling real-time inventory updates",
-    ],
-
-    improvements: [
-      "Add product recommendations using machine learning",
-      "Implement real-time chat support",
-      "Add wishlist and product comparison features",
-      "Integrate multiple payment gateways",
-      "Implement progressive web app (PWA) features",
-    ],
-
-    liveLink: "https://your-project.vercel.app",
-    githubLink: "https://github.com/yourusername/ecommerce-client",
+    liveLink: "https://plant-care-d3d4f.web.app/",
+    githubLink: "https://github.com/siddiquesakib/Plant-Care",
   },
   {
     id: 2,
-    name: "Task Management App",
+    name: "AdoptiPaws",
     shortDescription:
-      "A collaborative task management tool with real-time updates and team features",
-    image: "/projects/taskmanager.jpg",
-    technologies: ["React", "Firebase", "Material-UI", "Context API"],
+      "The AdoptiPaws is a full-stack web application designed for pet lovers and sellers to easily connect, buy, and sell pets online. Built using React, Tailwind CSS, Express, Firebase and MongoDB, this platform delivers a smooth, secure, and visually modern experience.",
+    image: "/adoptiPaws1.jpg",
+    technologies: [
+      "React",
+      "Firebase",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB ",
+    ],
     category: "Frontend",
     featured: true,
 
@@ -116,37 +111,22 @@ export const projects = [
 
     mainTech: {
       frontend: "React with Hooks and Context API",
-      backend: "Firebase (Firestore, Authentication, Cloud Functions)",
-      styling: "Material-UI component library",
+      backend: "Firebase (Firestore, Authentication)",
+      styling: "Tailwind CSS for responsive design",
       realtime: "Firebase Realtime Database for live updates",
     },
 
     features: [
-      "Drag-and-drop task boards (Kanban style)",
-      "Real-time collaboration with team members",
-      "Task assignment and deadline tracking",
-      "Project categorization and filtering",
-      "User authentication with Google Sign-in",
-      "Activity timeline and notifications",
+      "Built a full-stack pet marketplace using React, Tailwind, Express, Firebase, and MongoDB.",
+      "Added secure authentication so users can create, edit, and delete their own listings.",
+      "Developed a fast, responsive UI with Framer Motion animations and dark mode.",
+      "Integrated SweetAlert2 and Toastify for clean interactions and feedback.",
+      "Designed scalable backend APIs with clean data flow and separation of concerns.",
     ],
 
-    challenges: [
-      "Implementing smooth drag-and-drop functionality",
-      "Managing real-time data synchronization across users",
-      "Optimizing Firebase read/write operations to reduce costs",
-      "Creating an intuitive UI for complex task relationships",
-    ],
-
-    improvements: [
-      "Add calendar view for deadline visualization",
-      "Implement file attachment support",
-      "Add time tracking and productivity analytics",
-      "Create mobile app version using React Native",
-      "Add integration with popular tools like Slack and GitHub",
-    ],
-
-    liveLink: "https://taskmanager-demo.web.app",
-    githubLink: "https://github.com/yourusername/task-manager",
+    liveLink: "https://adoptipaws.web.app/",
+    githubLink: "https://github.com/siddiquesakib/AdoptiPaws-Client",
+    githubLink_Backend: "https://github.com/siddiquesakib/AdoptiPaws-Client",
   },
   {
     id: 3,
