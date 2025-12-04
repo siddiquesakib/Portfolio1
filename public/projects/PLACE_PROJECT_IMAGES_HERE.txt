@@ -1,0 +1,5 @@
+<!-- This is a placeholder file -->
+<!-- Add your project images here -->
+<!-- Recommended size: 800x600px or similar aspect ratio -->
+<!-- Format: JPG, PNG, or WebP -->
+<!-- Name them: ecommerce.jpg, taskmanager.jpg, weather.jpg, etc. -->
