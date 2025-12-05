@@ -12,25 +12,6 @@ const ProjectDetails = ({ projectId, onClose }) => {
 
   if (!project) return null;
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5 },
-    },
-  };
-
   return (
     <div className="min-h-screen bg-dark pt-32 pb-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,53 +127,59 @@ const ProjectDetails = ({ projectId, onClose }) => {
               <span className="text-primary">✨</span> Key Features
             </h3>
             <div className="grid sm:grid-cols-2 gap-3">
-              {project.features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-3 text-gray-300"
-                >
-                  <FaCheckCircle className="text-secondary mt-1 flex-shrink-0" />
-                  <span>{feature}</span>
-                </div>
-              ))}
+              {(project.features || project.Features || []).map(
+                (feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 text-gray-300"
+                  >
+                    <FaCheckCircle className="text-secondary mt-1 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </div>
+                )
+              )}
             </div>
           </div>
 
           {/* Challenges */}
-          <div className="glass rounded-2xl p-6 sm:p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <span className="text-primary">🎯</span> Challenges Faced
-            </h3>
-            <ul className="space-y-2">
-              {project.challenges.map((challenge, index) => (
-                <li
-                  key={index}
-                  className="flex items-start gap-3 text-gray-300"
-                >
-                  <span className="text-primary mt-1">▹</span>
-                  <span>{challenge}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {project.challenges && project.challenges.length > 0 && (
+            <div className="glass rounded-2xl p-6 sm:p-8 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <span className="text-primary">🎯</span> Challenges Faced
+              </h3>
+              <ul className="space-y-2">
+                {project.challenges.map((challenge, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-gray-300"
+                  >
+                    <span className="text-primary mt-1">▹</span>
+                    <span>{challenge}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* Future Improvements */}
-          <div className="glass rounded-2xl p-6 sm:p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <span className="text-primary">🚀</span> Future Improvements
-            </h3>
-            <ul className="space-y-2">
-              {project.improvements.map((improvement, index) => (
-                <li
-                  key={index}
-                  className="flex items-start gap-3 text-gray-300"
-                >
-                  <span className="text-primary mt-1">▹</span>
-                  <span>{improvement}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {project.improvements && project.improvements.length > 0 && (
+            <div className="glass rounded-2xl p-6 sm:p-8 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <span className="text-primary">🚀</span> Future Improvements
+              </h3>
+              <ul className="space-y-2">
+                {project.improvements.map((improvement, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-gray-300"
+                  >
+                    <span className="text-primary mt-1">▹</span>
+                    <span>{improvement}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </motion.div>
       </div>
     </div>

@@ -2,18 +2,19 @@ import { motion } from "framer-motion";
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
-  FaFacebook,
   FaDownload,
+  FaInstagram,
 } from "react-icons/fa";
 import { personalInfo } from "../data/portfolioData";
+import { TypeAnimation } from "react-type-animation";
+import { SiLinktree } from "react-icons/si";
 
 const Hero = () => {
   const socialIcons = {
     github: FaGithub,
     linkedin: FaLinkedin,
-    twitter: FaTwitter,
-    facebook: FaFacebook,
+    Instagram: FaInstagram,
+    Linktree: SiLinktree,
   };
 
   const containerVariants = {
@@ -86,7 +87,21 @@ const Hero = () => {
               variants={itemVariants}
               className="text-2xl sm:text-3xl font-semibold bg-gradient-to-r from-primary via-secondary to-pink-500 bg-clip-text text-transparent"
             >
-              {personalInfo.designation}
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed once, initially
+                  "MERN Stack Developer",
+                  1000,
+                  "Web Developer",
+                  1000,
+                  "Frontend Developer",
+                  1000,
+                ]}
+                speed={20}
+                style={{ fontSize: "2rem" }}
+                repeat={Infinity}
+                omitDeletionAnimation={true}
+              ></TypeAnimation>
             </motion.h3>
 
             <motion.p

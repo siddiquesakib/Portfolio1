@@ -15,8 +15,8 @@ export const personalInfo = {
   social: {
     github: "https://github.com/siddiquesakib/",
     linkedin: "https://www.linkedin.com/in/mohammad-siddique-sakib/",
-    twitter: "https://twitter.com/yourusername",
-    facebook: "https://facebook.com/yourusername",
+    Instagram: "https://www.instagram.com/amiboi_/",
+    Linktree: "https://linktr.ee/siddiquesakib",
   },
 
   about: {
@@ -95,7 +95,7 @@ export const projects = [
     name: "AdoptiPaws",
     shortDescription:
       "The AdoptiPaws is a full-stack web application designed for pet lovers and sellers to easily connect, buy, and sell pets online. Built using React, Tailwind CSS, Express, Firebase and MongoDB, this platform delivers a smooth, secure, and visually modern experience.",
-    image: "/adoptiPaws1.jpg",
+    image: "/adoptipaws1.png",
     technologies: [
       "React",
       "Firebase",

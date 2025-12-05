@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { personalInfo } from "../data/portfolioData";
+import { SiLinktree } from "react-icons/si";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,6 +9,12 @@ const Footer = () => {
   const socialLinks = [
     { icon: FaGithub, url: personalInfo.social.github, label: "GitHub" },
     { icon: FaLinkedin, url: personalInfo.social.linkedin, label: "LinkedIn" },
+    {
+      icon: FaInstagram,
+      url: personalInfo.social.Instagram,
+      label: "Instagram",
+    },
+    { icon: SiLinktree, url: personalInfo.social.Linktree, label: "Linktree" },
     {
       icon: FaWhatsapp,
       url: `https://wa.me/${personalInfo.whatsapp.replace(/[^0-9]/g, "")}`,
