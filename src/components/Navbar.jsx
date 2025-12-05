@@ -1,19 +1,16 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = ({ onNavigate, isProjectDetailsOpen }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 30);
 
-      // Detect active section
       const sections = ["home", "about", "skills", "projects", "contact"];
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -30,6 +27,7 @@ const Navbar = ({ onNavigate, isProjectDetailsOpen }) => {
       }
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -45,10 +43,8 @@ const Navbar = ({ onNavigate, isProjectDetailsOpen }) => {
   const scrollToSection = (e, href) => {
     e.preventDefault();
 
-    // If viewing project details, navigate back first
     if (isProjectDetailsOpen) {
       onNavigate();
-      // Wait for DOM to update before scrolling
       setTimeout(() => {
         const element = document.querySelector(href);
         if (element) {
@@ -61,24 +57,47 @@ const Navbar = ({ onNavigate, isProjectDetailsOpen }) => {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
-    setIsOpen(false);
   };
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="fixed top-6 left-0 right-0 z-50 flex justify-center"
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      className="fixed top-4 left-0 right-0 z-50 px-3 sm:px-4"
     >
       <div
-        className={`transition-all duration-300 rounded-full px-6 py-4 ${
+        className={`mx-auto w-full md:w-auto max-w-full md:max-w-fit flex flex-col md:flex-row items-center justify-center rounded-2xl px-3 sm:px-5 md:px-8 py-2.5 sm:py-3.5 transition-all duration-300 ${
           scrolled
-            ? "glass shadow-xl border border-white/10"
+            ? "glass shadow-2xl border border-white/10"
             : "glass border border-white/5"
         }`}
       >
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
+        {/* Mobile Layout */}
+        <div className="md:hidden flex flex-nowrap justify-between gap-1.5 w-full text-xs sm:text-sm">
+          {navItems.map((item, index) => {
+            const isActive = activeSection === item.href.substring(1);
+            return (
+              <motion.a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => scrollToSection(e, item.href)}
+                className={`flex-1 min-w-0 text-center px-2.5 py-1.5 rounded-lg font-medium transition-all duration-300 whitespace-nowrap ${
+                  isActive
+                    ? "text-white bg-gradient-to-r from-primary to-secondary shadow-inner"
+                    : "text-gray-300 hover:text-primary hover:bg-white/5"
+                }`}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+              >
+                {item.name}
+              </motion.a>
+            );
+          })}
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item, index) => {
             const isActive = activeSection === item.href.substring(1);
             return (
@@ -89,9 +108,9 @@ const Navbar = ({ onNavigate, isProjectDetailsOpen }) => {
                 className={`transition-colors duration-300 relative group font-medium ${
                   isActive ? "text-primary" : "text-gray-300 hover:text-primary"
                 }`}
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: -15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: 0.1 + index * 0.05 }}
               >
                 {item.name}
                 <span
@@ -103,45 +122,6 @@ const Navbar = ({ onNavigate, isProjectDetailsOpen }) => {
             );
           })}
         </div>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-300 hover:text-white focus:outline-none"
-          >
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <motion.div
-          initial={false}
-          animate={
-            isOpen ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }
-          }
-          className="md:hidden overflow-hidden border-t border-white/10 mt-4"
-        >
-          <div className="px-4 pt-2 pb-3 space-y-1">
-            {navItems.map((item) => {
-              const isActive = activeSection === item.href.substring(1);
-              return (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => scrollToSection(e, item.href)}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
-                    isActive
-                      ? "text-primary bg-primary/10"
-                      : "text-gray-300 hover:text-primary hover:bg-white/5"
-                  }`}
-                >
-                  {item.name}
-                </a>
-              );
-            })}
-          </div>
-        </motion.div>
       </div>
     </motion.nav>
   );
