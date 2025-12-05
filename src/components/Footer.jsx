@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <p className="text-gray-500 text-sm">
+        <p className="text-gray-500 text-center text-sm">
           © {currentYear} {personalInfo.name}. All rights reserved.
         </p>
       </div>

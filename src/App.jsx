@@ -14,7 +14,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-dark">
-      <Navbar />
+      <Navbar
+        onNavigate={() => setSelectedProject(null)}
+        isProjectDetailsOpen={!!selectedProject}
+      />
       {selectedProject ? (
         <ProjectDetails
           projectId={selectedProject}

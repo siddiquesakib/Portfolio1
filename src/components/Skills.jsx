@@ -132,7 +132,6 @@ const Skills = () => {
                 "MongoDB",
                 "Express",
                 "JavaScript",
-                "TypeScript",
                 "HTML5",
                 "CSS3",
                 "Tailwind",

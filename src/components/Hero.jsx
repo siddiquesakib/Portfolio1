@@ -1,10 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaDownload,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDownload, FaInstagram } from "react-icons/fa";
 import { personalInfo } from "../data/portfolioData";
 import { TypeAnimation } from "react-type-animation";
 import { SiLinktree } from "react-icons/si";
