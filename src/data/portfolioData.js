@@ -17,16 +17,11 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/mohammad-siddique-sakib/",
     Instagram: "https://www.instagram.com/amiboi_/",
     Linktree: "https://linktr.ee/siddiquesakib",
+    Discord: "https://discord.com/users/1187705886991454259",
   },
 
   about: {
     introduction: `Aspiring MERN-stack web developer with strong skills in JavaScript, React, Next.js, Node.js, and MongoDB. Passionate about building responsive, user-friendly web apps and eager to learn, contribute, and grow in a collaborative environment. `,
-
-    journey: `My programming journey began with curiosity and has evolved into a professional career. I started with HTML and CSS, then moved to JavaScript, and eventually mastered modern frameworks like React, Node.js, and more. Every day brings new challenges and opportunities to learn.`,
-
-    workStyle: `I enjoy working on projects that challenge me to think creatively and solve complex problems. I'm particularly drawn to full-stack development where I can bring ideas to life from concept to deployment. I love collaborating with teams and believe in writing clean, maintainable code.`,
-
-    hobbies: `When I'm not coding, you can find me playing basketball, reading tech blogs, or exploring nature through photography. I also enjoy contributing to open-source projects and mentoring aspiring developers.`,
   },
 };
 
@@ -36,7 +31,7 @@ export const skills = {
     { name: "JavaScript", level: 85 },
     { name: "HTML/CSS", level: 95 },
     { name: "Tailwind CSS", level: 88 },
-    { name: "Next.js", level: 80 },
+    { name: "Next.js", level: 50 },
   ],
   backend: [
     { name: "Node.js", level: 85 },
@@ -58,7 +53,7 @@ export const projects = [
     name: "Plant-Care",
     shortDescription:
       "An elegant single-page web application designed for plant enthusiasts to explore plant care guides, shop for plants, and book expert consultations.",
-    image: "/Plant-Care1.png",
+    image: "/projects/Plant-Care1.png",
     technologies: [
       "React",
       "JavaScript",
@@ -95,7 +90,7 @@ export const projects = [
     name: "AdoptiPaws",
     shortDescription:
       "The AdoptiPaws is a full-stack web application designed for pet lovers and sellers to easily connect, buy, and sell pets online. Built using React, Tailwind CSS, Express, Firebase and MongoDB, this platform delivers a smooth, secure, and visually modern experience.",
-    image: "/adoptipaws1.png",
+    image: "/projects/adoptipaws1.png",
     technologies: [
       "React",
       "Firebase",
@@ -104,7 +99,7 @@ export const projects = [
       "Express.js",
       "MongoDB ",
     ],
-    category: "Frontend",
+    category: "Frontend , backend",
     featured: true,
 
     fullDescription: `A modern task management application that helps teams organize, track, and collaborate on projects. Features include drag-and-drop task boards, real-time updates, and team collaboration tools.`,
@@ -130,10 +125,10 @@ export const projects = [
   },
   {
     id: 3,
-    name: "Weather Dashboard",
+    name: "sakib_portfolio",
     shortDescription:
-      "A beautiful weather app with forecasts, maps, and weather alerts",
-    image: "/projects/weather.jpg",
+      "A modern, responsive, and interactive portfolio website built with **React**, **Vite**, **Tailwind CSS**, and **Framer Motion**. This project showcases skills, experience, and projects in a visually appealing single-page application.",
+    image: "/projects/sakib_portfolio1.jpg",
     technologies: ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
     category: "Frontend",
     featured: false,

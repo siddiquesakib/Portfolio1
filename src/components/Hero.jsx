@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaDownload, FaInstagram } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaDownload,
+  FaInstagram,
+  FaDiscord,
+} from "react-icons/fa";
 import { personalInfo } from "../data/portfolioData";
 import { TypeAnimation } from "react-type-animation";
 import { SiLinktree } from "react-icons/si";
@@ -10,6 +16,7 @@ const Hero = () => {
     linkedin: FaLinkedin,
     Instagram: FaInstagram,
     Linktree: SiLinktree,
+    Discord: FaDiscord,
   };
 
   const containerVariants = {

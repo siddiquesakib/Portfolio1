@@ -5,6 +5,8 @@ import {
   FaPhone,
   FaWhatsapp,
   FaMapMarkerAlt,
+  FaLinkedin,
+  FaDiscord,
 } from "react-icons/fa";
 import { personalInfo } from "../data/portfolioData";
 
@@ -60,6 +62,22 @@ const Contact = () => {
       link: null,
       color: "from-red-500 to-pink-500",
     },
+    {
+      icon: FaLinkedin,
+      title: "LinkedIn",
+      value: "Connect on LinkedIn",
+      link: personalInfo.social.linkedin,
+      color: "from-blue-600 to-blue-800",
+      external: true,
+    },
+    {
+      icon: FaDiscord,
+      title: "Discord",
+      value: "Message on Discord",
+      link: personalInfo.social.Discord,
+      color: "from-indigo-500 to-purple-600",
+      external: true,
+    },
   ];
 
   return (
@@ -100,8 +118,16 @@ const Contact = () => {
                   {method.link ? (
                     <a
                       href={method.link}
-                      target={method.title === "WhatsApp" ? "_blank" : "_self"}
-                      rel="noopener noreferrer"
+                      target={
+                        method.external || method.title === "WhatsApp"
+                          ? "_blank"
+                          : "_self"
+                      }
+                      rel={
+                        method.external || method.title === "WhatsApp"
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                       className="flex items-center gap-3 p-4 bg-white/5 rounded-lg border border-white/5 hover:border-primary/30 transition-all duration-300 group"
                     >
                       <div

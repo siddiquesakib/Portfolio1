@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaWhatsapp,
+  FaInstagram,
+  FaDiscord,
+} from "react-icons/fa";
 import { personalInfo } from "../data/portfolioData";
 import { SiLinktree } from "react-icons/si";
 
@@ -15,6 +21,7 @@ const Footer = () => {
       label: "Instagram",
     },
     { icon: SiLinktree, url: personalInfo.social.Linktree, label: "Linktree" },
+    { icon: FaDiscord, url: personalInfo.social.Discord, label: "Discord" },
     {
       icon: FaWhatsapp,
       url: `https://wa.me/${personalInfo.whatsapp.replace(/[^0-9]/g, "")}`,
