@@ -114,6 +114,18 @@ const Projects = ({ onProjectClick }) => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60"></div>
 
+                  {/* Group Project Badge */}
+                  {project.isGroupProject && (
+                    <motion.div
+                      className="absolute top-4 left-4 px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white text-xs font-bold flex items-center gap-1"
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.2 + index * 0.1 }}
+                    >
+                      👥 Group Project
+                    </motion.div>
+                  )}
+
                   {/* Featured Badge */}
                   {project.featured && (
                     <motion.div
@@ -200,6 +212,21 @@ const Projects = ({ onProjectClick }) => {
               </p>
             </motion.div>
           )}
+
+          {/* View More on GitHub Button */}
+          <motion.div variants={itemVariants} className="text-center mt-12">
+            <motion.a
+              href="https://github.com/siddiquesakib/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-full font-semibold border border-gray-700 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FaGithub size={24} />
+              <span>View More Projects on GitHub</span>
+            </motion.a>
+          </motion.div>
         </motion.div>
       </div>
     </section>

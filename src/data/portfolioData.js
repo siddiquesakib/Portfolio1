@@ -1,5 +1,3 @@
-// Portfolio Data - Update this file with your personal information
-
 export const personalInfo = {
   name: "Mohammad Siddique Sakib",
   designation: "MERN Stack Developer",
@@ -9,8 +7,8 @@ export const personalInfo = {
   phone: "+8801851182639",
   whatsapp: "+8801851182639",
   location: "Chattogram, Bangladesh",
-  resumeUrl: "/Resume_of_Mohammad_Siddique_Sakib.pdf", // Place your resume in the public folder
-  profileImage: "/Ts.png", // Place your image in the public folder
+  resumeUrl: "/Resume_of_Mohammad_Siddique_Sakib.pdf",
+  profileImage: "/Ts.png",
 
   social: {
     github: "https://github.com/siddiquesakib/",
@@ -63,15 +61,11 @@ export const projects = [
     ],
     category: "Frontend",
     featured: true,
-
-    // Detailed information
     fullDescription: `A comprehensive e-commerce platform that allows users to browse products, add items to cart, and complete purchases securely. The admin dashboard enables product management, order tracking, and analytics visualization.`,
-
     mainTech: {
       frontend: "React with React Router and Context API for state management",
       styling: "Tailwind CSS for responsive design",
     },
-
     Features: [
       "User authentication and authorization",
       "Product search and filtering",
@@ -127,8 +121,8 @@ export const projects = [
     id: 3,
     name: "sakib_portfolio",
     shortDescription:
-      "A modern, responsive, and interactive portfolio website built with **React**, **Vite**, **Tailwind CSS**, and **Framer Motion**. This project showcases skills, experience, and projects in a visually appealing single-page application.",
-    image: "/projects/sakib_portfolio1.jpg",
+      "A modern, responsive, and interactive portfolio website built with React, Vite, Tailwind CSS, and Framer Motion. This project showcases skills, experience, and projects in a visually appealing single-page application.",
+    image: "/public/projects/sakib_portfolio1.jpg",
     technologies: ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
     category: "Frontend",
     featured: false,
@@ -168,7 +162,73 @@ export const projects = [
       "Add social sharing features for weather updates",
     ],
 
-    liveLink: "https://weather-dashboard-demo.netlify.app",
-    githubLink: "https://github.com/yourusername/weather-dashboard",
+    liveLink: "https://siddique-sakib-portfolio.vercel.app/",
+    githubLink: "https://github.com/siddiquesakib/Portfolio1",
+  },
+  {
+    id: 4,
+    name: "EventHive - Event Management System",
+    shortDescription:
+      "A robust MERN Stack platform connecting event organizers and attendees. Features Role-Based Access, Stripe Payments, and a unique Admin Approval Workflow for managers. Group Project - Built collaboratively with a team.",
+    image: "/public/projects/event-hive.png",
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Stripe",
+      "Firebase",
+      "TanStack Query",
+    ],
+    category: "Full Stack",
+    featured: true,
+    isGroupProject: true,
+    teamSize: 3,
+    myRole: "Frontend Developer",
+    myContributions: [
+      "Developed responsive UI components using React and Tailwind CSS",
+      "Implemented user authentication flow with Firebase",
+      "Built dynamic dashboards with charts and analytics",
+      "Integrated Stripe payment gateway on the frontend",
+      "Created smooth animations using Framer Motion",
+    ],
+
+    fullDescription: `EventHive is a comprehensive full-stack solution designed to streamline the event management process, built collaboratively as a Group Project. Unlike standard platforms, it introduces a strict verification system where general users must request Admin approval to become Event Managers. It handles complex logic like atomic database transactions for seat management and a time-sensitive smart refund policy.`,
+
+    mainTech: {
+      frontend: "React (Vite) with TanStack Query and Framer Motion",
+      backend: "Node.js & Express.js with robust API structure",
+      database: "MongoDB with Mongoose Transactions (ACID Compliance)",
+      authentication: "Firebase Auth & JWT for secure role-based access",
+      payments: "Stripe Payment Gateway for secure transactions",
+    },
+
+    features: [
+      "Three distinct roles: User, Event Manager, and Admin",
+      "Unique 'Make Manager' approval workflow controlled by Admins",
+      "Secure ticket booking with Stripe integration",
+      "Smart Refund Logic (100% refund > 48hrs, 60% refund < 48hrs)",
+      "Real-time seat availability tracking to prevent overselling",
+      "Dynamic dashboards with revenue charts and analytics",
+      "Advanced search and filtering by category, date, and price",
+    ],
+
+    challenges: [
+      "Implementing Atomic Transactions to ensure payments and seat counts sync perfectly",
+      "Designing the complex role-based route protection (RBAC) middleware",
+      "Handling the date-logic for the automated smart refund system",
+      "Managing state efficiently across different user dashboards",
+    ],
+
+    improvements: [
+      "Add QR Code generation for ticket validation at entry",
+      "Implement real-time notifications using Socket.io",
+      "Integrate a review and rating system for events",
+      "Add multi-language support (i18n)",
+      "Develop a mobile application using React Native",
+    ],
+
+    liveLink: "https://event-hive-bd.vercel.app/",
+    githubLink: "https://github.com/siddiquesakib/EventHive",
+    githubLink_Backend: "https://github.com/Sahidulislam05/Event-Hive-API",
   },
 ];
