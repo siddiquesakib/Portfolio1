@@ -193,6 +193,7 @@ export const projects = [
       "React",
       "Node.js",
       "MongoDB",
+      "Mongoos",
       "Stripe",
       "Firebase",
       "TanStack Query",
