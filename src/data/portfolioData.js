@@ -52,6 +52,12 @@ export const projects = [
     shortDescription:
       "An elegant single-page web application designed for plant enthusiasts to explore plant care guides, shop for plants, and book expert consultations.",
     image: "/projects/Plant-Care1.png",
+    gallery: [
+      "/projects/Plant-Care2.png",
+      "/projects/Plant-Care3.png",
+      "/projects/Plant-Care4.png",
+      "/projects/Plant-Care5.png",
+    ],
     technologies: [
       "React",
       "JavaScript",
@@ -170,7 +176,14 @@ export const projects = [
     name: "EventHive - Event Management System",
     shortDescription:
       "A robust MERN Stack platform connecting event organizers and attendees. Features Role-Based Access, Stripe Payments, and a unique Admin Approval Workflow for managers. Group Project - Built collaboratively with a team.",
-    image: "/projects/event-hive.png",
+    image: "/projects/event-hive1.png",
+    gallery: [
+      "/projects/event-hive2.png",
+      "/projects/event-hive3.png",
+      "/projects/event-hive4.png",
+      "/projects/event-hive5.png",
+      "/projects/event-hive6.png",
+    ],
     technologies: [
       "React",
       "Node.js",
