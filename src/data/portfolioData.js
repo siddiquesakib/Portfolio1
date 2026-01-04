@@ -122,7 +122,7 @@ export const projects = [
     name: "sakib_portfolio",
     shortDescription:
       "A modern, responsive, and interactive portfolio website built with React, Vite, Tailwind CSS, and Framer Motion. This project showcases skills, experience, and projects in a visually appealing single-page application.",
-    image: "/public/projects/sakib_portfolio1.jpg",
+    image: "/projects/sakib_portfolio1.jpg",
     technologies: ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
     category: "Frontend",
     featured: false,
@@ -170,7 +170,7 @@ export const projects = [
     name: "EventHive - Event Management System",
     shortDescription:
       "A robust MERN Stack platform connecting event organizers and attendees. Features Role-Based Access, Stripe Payments, and a unique Admin Approval Workflow for managers. Group Project - Built collaboratively with a team.",
-    image: "/public/projects/event-hive.png",
+    image: "/projects/event-hive.png",
     technologies: [
       "React",
       "Node.js",
