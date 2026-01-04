@@ -200,7 +200,7 @@ export const projects = [
     category: "Full Stack",
     featured: true,
     isGroupProject: true,
-    teamSize: 3,
+    teamSize: 5,
     myRole: "Frontend Developer",
     myContributions: [
       "Developed responsive UI components using React and Tailwind CSS",
