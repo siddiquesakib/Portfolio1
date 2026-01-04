@@ -125,10 +125,15 @@ export const projects = [
   },
   {
     id: 3,
-    name: "sakib_portfolio",
+    name: "sakib Portfolio",
     shortDescription:
       "A modern, responsive, and interactive portfolio website built with React, Vite, Tailwind CSS, and Framer Motion. This project showcases skills, experience, and projects in a visually appealing single-page application.",
-    image: "/projects/sakib_portfolio1.jpg",
+    image: "/projects/sakib_portfolio1.png",
+    gallery: [
+      "/projects/sakib_portfolio2.png",
+      "/projects/sakib_portfolio3.png",
+      "/projects/sakib_portfolio4.png",
+    ],
     technologies: ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
     category: "Frontend",
     featured: false,
